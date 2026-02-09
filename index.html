@@ -1,369 +1,417 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        <?= $domainTitle ?> — Экспертный консалтинг и стратегии роста
-    </title>
-<link rel="icon"
-    href="data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23635BFF;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%230A2540;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M4 16H9L12 6L18 26L21 16H28' stroke='url(%23grad)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='28' cy='16' r='3' fill='%23635BFF' /%3E%3C/svg%3E"
-    type="image/svg+xml">
+    <title><?= $domainTitle ?> — Практический AI для каждого</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%233b82f6'/><stop offset='100%' style='stop-color:%238b5cf6'/></linearGradient></defs><circle cx='50' cy='50' r='40' fill='none' stroke='url(%23g)' stroke-width='8'/><circle cx='50' cy='50' r='10' fill='url(%23g)'/><path d='M50 10 L50 30 M50 70 L50 90 M10 50 L30 50 M70 50 L90 50' stroke='url(%23g)' stroke-width='6' stroke-linecap='round'/></svg>">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Manrope:wght@500;800&display=swap"
-        rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
     <header class="header">
         <div class="container header__container">
-            <a href="./#hero" class="logo">
+            <a href="./#home" class="logo">
                 <span class="logo__icon"></span>
-                <span class="logo__text">
-                    <?= $domainTitle ?>
-                </span>
+                <span class="logo__text"><?= $domainTitle ?></span>
             </a>
-
-            <nav class="nav">
+            
+            <nav class="nav" id="nav">
                 <ul class="nav__list">
-                    <li><a href="./#hero" class="nav__link">Главная</a></li>
-                    <li><a href="./#strategies" class="nav__link">Стратегии</a></li>
-                    <li><a href="./#expertise" class="nav__link">Экспертиза</a></li>
-                    <li><a href="./#insights" class="nav__link">Инсайты</a></li>
-                    <li><a href="./#reviews" class="nav__link">Отзывы</a></li>
+                    <li><a href="./#home" class="nav__link">Главная</a></li>
+                    <li><a href="./#features" class="nav__link">Возможности</a></li>
+                    <li><a href="./#cases" class="nav__link">Кейсы</a></li>
+                    <li><a href="./#education" class="nav__link">Обучение</a></li>
+                    <li><a href="./#faq" class="nav__link">Вопросы</a></li>
                 </ul>
             </nav>
 
-            <a href="./#contact" class="btn btn--outline header__cta">Связаться</a>
-
-            <button class="burger" aria-label="Menu">
+            <a href="./#contact" class="btn btn--outline header__btn">Связаться</a>
+            
+            <button class="burger" aria-label="Menu" id="burger">
                 <span></span>
             </button>
         </div>
     </header>
+<main>
+    <section class="hero" id="home">
+        <div class="hero__bg">
+            <div class="hero__blob"></div>
+            <div class="hero__blob hero__blob--2"></div>
+        </div>
+        
+        <div class="container hero__container">
+            <div class="hero__content">
+                <div class="badge hero__badge">
+                    <span class="badge__dot"></span>
+                    Платформа года
+                </div>
+                <h1 class="hero__title">
+                    AI-инструменты для <br>
+                    <span class="text-gradient">реальных задач</span>
+                </h1>
+                <p class="hero__subtitle">
+                    Технологии, которые работают на вас. Легко разобраться без опыта — пошаговый путь к автоматизации повседневных дел, понятный каждому.
+                </p>
+                <div class="hero__actions">
+                    <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                    <a href="#features" class="btn btn--link">
+                        Узнать детали 
+                        <i data-lucide="arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="hero__stats">
+                    <div class="stat-item">
+                        <span class="stat-item__val">2 мин</span>
+                        <span class="stat-item__label">на подключение</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-item__val">100%</span>
+                        <span class="stat-item__label">практики</span>
+                    </div>
+                </div>
+            </div>
 
-    <main>
-<section id="hero" class="hero">
-    <div id="hero-canvas" class="hero__canvas"></div>
-
-    <div class="container hero__container">
-        <div class="hero__content">
-            <div class="badge" data-aos="fade-down">Платформа года 2026</div>
-            <h1 class="hero__title">
-                <span class="text-gradient">Инновационная технология</span> <br>
-                вашего бизнес-роста
-            </h1>
-            <p class="hero__subtitle">
-                Решения, которые меняют правила игры. Мы внедряем AI-инструменты для реальных задач, расширяя горизонты
-                вашего проекта в Европе и за её пределами.
-            </p>
-            <div class="hero__actions">
-                <a href="#contact" class="btn btn--primary">Бесплатная консультация</a>
-                <a href="#strategies" class="btn btn--link">Узнать детали <i data-lucide="arrow-right"></i></a>
+            <div class="hero__image">
+                <div class="hero__card">
+                    <img src="/img/one.jpg" alt="AI Interface" class="hero__main-img">
+                    <div class="hero__floating-element hero__floating-element--1">
+                        <i data-lucide="zap"></i>
+                        <span>Быстрый старт</span>
+                    </div>
+                    <div class="hero__floating-element hero__floating-element--2">
+                        <i data-lucide="shield-check"></i>
+                        <span>Проверено экспертами</span>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-head">
+                <h2 class="section-title">Практики, применимые <span class="text-gradient">уже сегодня</span></h2>
+                <p class="section-subtitle">Решения, которые меняют правила игры в вашей повседневной жизни и карьере.</p>
+            </div>
 
-    <div class="hero__scroll-indicator">
-        <div class="mouse"></div>
-    </div>
-</section>
-<section id="strategies" class="strategies">
-    <div class="container">
-        <div class="strategies__grid">
-            <div class="strategies__content">
+            <div class="features__grid">
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <i data-lucide="brain-circuit"></i>
+                    </div>
+                    <h3 class="feature-card__title">Личный ассистент</h3>
+                    <p class="feature-card__text">Настройка ИИ для планирования дня, управления почтой и генерации идей. Пошаговый путь, понятный каждому.</p>
+                    <ul class="feature-card__list">
+                        <li><i data-lucide="check-circle-2"></i> Быстрый и лёгкий старт</li>
+                        <li><i data-lucide="check-circle-2"></i> Автоматизация рутины</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card feature-card--active">
+                    <div class="feature-card__icon">
+                        <i data-lucide="bar-chart-3"></i>
+                    </div>
+                    <h3 class="feature-card__title">Стратегия роста</h3>
+                    <p class="feature-card__text">Используйте алгоритмы для анализа финансов и создания программ пассивного дохода без сложных вложений.</p>
+                    <ul class="feature-card__list">
+                        <li><i data-lucide="check-circle-2"></i> Оценить перспективы</li>
+                        <li><i data-lucide="check-circle-2"></i> Рост на базе инноваций</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-card__icon">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="feature-card__title">Креатив на максимум</h3>
+                    <p class="feature-card__text">Генерация изображений, текстов и видео для ваших соцсетей или бизнеса за считанные секунды.</p>
+                    <ul class="feature-card__list">
+                        <li><i data-lucide="check-circle-2"></i> Легко без опыта</li>
+                        <li><i data-lucide="check-circle-2"></i> Экономия времени</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cases" id="cases">
+        <div class="container">
+            <div class="section-head section-head--left">
                 <div class="badge">Методологии</div>
-                <h2 class="section-title">Стратегии роста на базе инноваций</h2>
-
-                <div class="strategy-item active" data-shape="circle">
-                    <h3>Переосмыслите подход</h3>
-                    <p>Технология нового поколения позволяет переосмыслить классические бизнес-процессы, внедряя
-                        гибкость там, где раньше был застой.</p>
-                </div>
-
-                <div class="strategy-item" data-shape="polygon">
-                    <h3>Оценить перспективы</h3>
-                    <p>Наши эксперты помогут оценить перспективы проекта, используя AI-инструменты для глубокого анализа
-                        рынка Европы.</p>
-                </div>
-
-                <div class="strategy-item" data-shape="blob">
-                    <h3>Масштабирование</h3>
-                    <p>Решения, которые меняют правила игры: от локального стартапа до передовой цифровой инфраструктуры
-                        масштаба ЕС.</p>
-                </div>
+                <h2 class="section-title">AI-решения для <span class="text-gradient">реальных задач</span></h2>
             </div>
 
-            <div class="strategies__visual">
-                <div class="morph-container">
-                    <img src="/img/one.jpg" alt="Strategy visual" class="morph-img">
-                    <div class="morph-overlay"></div>
+            <div class="swiper cases-slider">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="case-card">
+                            <div class="case-card__image">
+                                <img src="/img/two.jpg" alt="Case 1">
+                                <div class="case-card__tag">Результат: -15ч/неделя</div>
+                            </div>
+                            <div class="case-card__content">
+                                <h4 class="case-card__title">Автоматизация быта</h4>
+                                <p class="case-card__text">Переосмыслите подход к развитию: как настроенный GPT-агент стал полноценным секретарем для многодетной семьи в Париже.</p>
+                                <a href="#contact" class="case-card__link">Узнать детали <i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="case-card">
+                            <div class="case-card__image">
+                                <img src="/img/three.jpg" alt="Case 2">
+                                <div class="case-card__tag">Доход: +25%</div>
+                            </div>
+                            <div class="case-card__content">
+                                <h4 class="case-card__title">Программа пассивного дохода</h4>
+                                <p class="case-card__text">Технология для пассивного дохода через генерацию и дистрибуцию контента на 5 языках без участия человека.</p>
+                                <a href="#contact" class="case-card__link">Смотреть кейс <i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <div class="case-card">
+                            <div class="case-card__image">
+                                <img src="/img/four.jpg" alt="Case 3">
+                                <div class="case-card__tag">Старт: за 2 минуты</div>
+                            </div>
+                            <div class="case-card__content">
+                                <h4 class="case-card__title">Карьерный апгрейд</h4>
+                                <p class="case-card__text">Постройте карьеру, которая работает на вас. Использование ИИ для подготовки к собеседованиям и редизайна резюме.</p>
+                                <a href="#contact" class="case-card__link">Запросить доступ <i data-lucide="external-link"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section id="expertise" class="expertise">
-    <div class="container">
-        <div class="expertise__header">
-            <div class="badge">Наши возможности</div>
-            <h2 class="section-title">Передовая цифровая инфраструктура</h2>
-            <p class="section-subtitle">Технологии, которые работают на вас. Мы объединяем аналитику и AI-инструменты
-                для создания устойчивого преимущества.</p>
-        </div>
-
-        <div class="expertise__grid">
-            <div class="exp-card" data-aos="fade-up">
-                <div class="exp-card__icon">
-                    <i data-lucide="bar-chart-3"></i>
-                </div>
-                <h3>Анализ рынка ЕС</h3>
-                <p>Глубокое погружение в специфику немецкого и европейского рынков для точного позиционирования.</p>
-                <ul class="exp-card__list">
-                    <li><i data-lucide="check"></i> Прогноз трендов</li>
-                    <li><i data-lucide="check"></i> Анализ конкурентов</li>
-                </ul>
+    </section>
+    <section class="education" id="education">
+        <div class="container">
+            <div class="section-head">
+                <div class="badge">Ваш результат</div>
+                <h2 class="section-title">Как меняется <span class="text-gradient">ваш подход</span></h2>
+                <p class="section-subtitle">Обучение по методологиям, доказавшим эффективность: от ручного труда к интеллектуальному управлению.</p>
             </div>
 
-            <div class="exp-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="exp-card__icon">
-                    <i data-lucide="cpu"></i>
+            <div class="transform-box">
+                <div class="transform-grid">
+                    <div class="transform-item">
+                        <div class="transform-item__header">
+                            <span class="transform-item__num">01</span>
+                            <h4>Работа с информацией</h4>
+                        </div>
+                        <div class="transform-card-pair">
+                            <div class="card-before">
+                                <span class="card-label">До</span>
+                                <p>Часы на поиск, чтение лонгридов и ручной сбор данных из разных источников.</p>
+                            </div>
+                            <div class="card-after">
+                                <span class="card-label card-label--ai">После</span>
+                                <p>Мгновенная суммаризация, выделение смыслов и структурирование базы знаний ИИ.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transform-item">
+                        <div class="transform-item__header">
+                            <span class="transform-item__num">02</span>
+                            <h4>Создание контента</h4>
+                        </div>
+                        <div class="transform-card-pair">
+                            <div class="card-before">
+                                <span class="card-label">До</span>
+                                <p>Страх чистого листа, мучительный подбор слов и поиск идей днями напролет.</p>
+                            </div>
+                            <div class="card-after">
+                                <span class="card-label card-label--ai">После</span>
+                                <p>Десятки идей и черновиков за 2 минуты. Вы — редактор и стратег, а не исполнитель.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transform-item">
+                        <div class="transform-item__header">
+                            <span class="transform-item__num">03</span>
+                            <h4>Профессиональный рост</h4>
+                        </div>
+                        <div class="transform-card-pair">
+                            <div class="card-before">
+                                <span class="card-label">До</span>
+                                <p>Стагнация из-за нехватки времени на изучение новых инструментов и трендов.</p>
+                            </div>
+                            <div class="card-after">
+                                <span class="card-label card-label--ai">После</span>
+                                <p>Постройте карьеру, которая работает на вас, используя ИИ как ускоритель компетенций.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h3>AI Интеграция</h3>
-                <p>Внедрение нейросетей в бизнес-процессы: от автоматизации до генерации контента.</p>
-                <ul class="exp-card__list">
-                    <li><i data-lucide="check"></i> Оптимизация затрат</li>
-                    <li><i data-lucide="check"></i> Умные чат-боты</li>
-                </ul>
             </div>
 
-            <div class="exp-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="exp-card__icon">
-                    <i data-lucide="shield-check"></i>
-                </div>
-                <h3>Compliance & IT</h3>
-                <p>Обеспечение безопасности данных и соответствие стандартам GDPR в Германии.</p>
-                <ul class="exp-card__list">
-                    <li><i data-lucide="check"></i> Защита данных</li>
-                    <li><i data-lucide="check"></i> Аудит систем</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="insights" class="insights">
-    <div class="container">
-        <div class="insights__top">
-            <h2 class="section-title">Инсайты и кейсы</h2>
-            <div class="swiper-navigation">
-                <button class="swiper-button-prev-custom"><i data-lucide="chevron-left"></i></button>
-                <button class="swiper-button-next-custom"><i data-lucide="chevron-right"></i></button>
-            </div>
-        </div>
-
-        <div class="swiper insights-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide insight-card">
-                    <div class="insight-card__image">
-                        <img src="/img/two.jpg" alt="Insight 1">
-                        <span class="category">AI & Data</span>
-                    </div>
-                    <div class="insight-card__content">
-                        <h3>Как внедрить AI-инструменты для реальных задач в 2026 году</h3>
-                        <p>Разбираем пошаговый путь автоматизации маркетинга для компаний в Германии.</p>
-                        <a href="#contact" class="btn-text">Читать полностью <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide insight-card">
-                    <div class="insight-card__image">
-                        <img src="/img/three.jpg" alt="Insight 2">
-                        <span class="category">Strategy</span>
-                    </div>
-                    <div class="insight-card__content">
-                        <h3>Решения, которые меняют правила игры на рынке ЕС</h3>
-                        <p>Анализ новой цифровой инфраструктуры и её влияние на средний бизнес.</p>
-                        <a href="#contact" class="btn-text">Читать полностью <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="swiper-slide insight-card">
-                    <div class="insight-card__image">
-                        <img src="/img/four.jpg" alt="Insight 3">
-                        <span class="category">Growth</span>
-                    </div>
-                    <div class="insight-card__content">
-                        <h3>Программа пассивного дохода для инвесторов</h3>
-                        <p>Оцените перспективы проекта в сфере финтех-консалтинга.</p>
-                        <a href="#contact" class="btn-text">Читать полностью <i data-lucide="arrow-right"></i></a>
-                    </div>
-                </div>
+            <div class="education__cta">
+                <p>Подключение занимает 2 минуты. Получите доступ к практикам уже сегодня.</p>
+                <a href="#contact" class="btn btn--outline">Бесплатная консультация</a>
             </div>
         </div>
-    </div>
-</section>
-<section id="reviews" class="reviews">
-    <div class="container">
-        <div class="reviews__header">
-            <div class="badge">Доверие и экспертность</div>
-            <h2 class="section-title">Что говорят о
-                <?= $domainTitle ?>
-            </h2>
-            <p class="section-subtitle">Методологии, доказавшие эффективность в реальных кейсах по всей Европе.</p>
-        </div>
-
-        <div class="reviews__grid">
-            <div class="review-card" data-aos="fade-up">
-                <div class="review-card__quote">
-                    <i data-lucide="quote"></i>
-                </div>
-                <p class="review-card__text">
-                    «Решения, которые меняют правила игры. Благодаря Pulse Dapt мы внедрили AI-инструменты для реальных
-                    задач, что сократило операционные расходы на 30% за первый квартал.»
-                </p>
-                <div class="review-card__author">
-                    <div class="author__info">
-                        <strong>Markus Weber</strong>
-                        <span>CEO, TechFlow Berlin</span>
+    </section>
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="faq__grid">
+                <div class="faq__info">
+                    <div class="badge">Помощь</div>
+                    <h2 class="section-title">Популярные <br><span class="text-gradient">вопросы</span></h2>
+                    <p class="section-subtitle">Экспертная поддержка на всех этапах вашего погружения в мир нейросетей.</p>
+                    
+                    <div class="faq__support-card">
+                        <i data-lucide="message-circle"></i>
+                        <div>
+                            <h5>Остались вопросы?</h5>
+                            <p>Напишите нам в поддержку, мы ответим в течение 15 минут.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="review-card" data-aos="fade-up" data-aos-delay="100">
-                <div class="review-card__quote">
-                    <i data-lucide="quote"></i>
-                </div>
-                <p class="review-card__text">
-                    «Инновационная технология и экспертная поддержка на всех этапах. Помогли нам переосмыслить подход к
-                    развитию и выйти на рынок Италии за считанные месяцы.»
-                </p>
-                <div class="review-card__author">
-                    <div class="author__info">
-                        <strong>Elena Rossi</strong>
-                        <span>Director of Strategy</span>
+                <div class="faq__accordion">
+                    <div class="accordion-item active">
+                        <button class="accordion-header">
+                            Нужно ли уметь программировать?
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Абсолютно нет. Наши практики разработаны специально для обычных людей. Если вы умеете пользоваться мессенджерами или браузером, вы сможете освоить ИИ за 2 минуты.</p>
+                        </div>
                     </div>
-                </div>
-            </div>
 
-            <div class="review-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="review-card__quote">
-                    <i data-lucide="quote"></i>
-                </div>
-                <p class="review-card__text">
-                    «Лучшая платформа года для консалтинга. Все процессы прозрачны, а пошаговый путь понятен каждому
-                    сотруднику нашей команды. Идеально для немецкого бизнеса.»
-                </p>
-                <div class="review-card__author">
-                    <div class="author__info">
-                        <strong>Stefan Kühn</strong>
-                        <span>Founder, Digital DE</span>
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Какие ИИ-инструменты мы изучаем?
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Мы фокусируемся на решениях, которые меняют правила игры: от текстовых моделей (ChatGPT, Claude) до инструментов генерации контента и автоматизации бытовых задач.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Доступна ли платформа в Европе?
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Да, платформа уже доступна в Европе. Все методологии адаптированы под европейские стандарты безопасности и сервисы, доступные во Франции и других странах ЕС.</p>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <button class="accordion-header">
+                            Можно ли заработать на этом?
+                            <i data-lucide="chevron-down"></i>
+                        </button>
+                        <div class="accordion-content">
+                            <p>Мы предлагаем конкретные стратегии роста: от оптимизации рабочих процессов до создания программ пассивного дохода с помощью автоматизации контента.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="reviews__cta">
-            <p>Хотите стать частью нашей истории успеха?</p>
-            <a href="#contact" class="btn btn--link">Запросить доступ <i data-lucide="chevron-right"></i></a>
-        </div>
-    </div>
-</section>
-<section id="contact" class="contact">
-    <div class="container contact__container">
-        <div class="contact__info">
-            <div class="badge">Обратная связь</div>
-            <h2 class="section-title">Готовы расширить горизонты проекта?</h2>
-            <p>Заполните форму, и наш эксперт свяжется с вами в течение 2 часов для бесплатной консультации по всем
-                вопросам.</p>
-
-            <div class="contact__methods">
-                <div class="method-item">
-                    <div class="method-icon"><i data-lucide="mail"></i></div>
-                    <div>
-                        <span>Пишите нам</span>
-                        <strong>hello@
-                            <?= $fullDomain ?>
-                        </strong>
+    </section>
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__wrapper">
+                <div class="contact__content">
+                    <h2 class="section-title">Начните свой <br><span class="text-gradient">путь в будущее</span></h2>
+                    <p class="contact__text">
+                        Заполните форму, чтобы получить бесплатную консультацию по всем вопросам и доступ к закрытым практикам применения ИИ.
+                    </p>
+                    
+                    <div class="contact__features">
+                        <div class="c-feat">
+                            <i data-lucide="check-circle"></i>
+                            <span>Методологии, доказавшие эффективность</span>
+                        </div>
+                        <div class="c-feat">
+                            <i data-lucide="check-circle"></i>
+                            <span>Экспертная поддержка на всех этапах</span>
+                        </div>
                     </div>
                 </div>
-                <div class="method-item">
-                    <div class="method-icon"><i data-lucide="phone"></i></div>
-                    <div>
-                        <span>Звоните</span>
-                        <strong>+390697639457</strong>
-                    </div>
+
+                <div class="contact__form-block">
+                    <form id="contactForm" class="form">
+                        <div class="form__group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" placeholder="Иван Иванов" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="hello@example.com" required>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+33XXXXXXXXX" required>
+                            <small class="form__hint">Только цифры, включая код страны</small>
+                        </div>
+
+                        <div class="form__captcha">
+                            <label>Решите пример: <span id="captcha-task">5 + 3 = ?</span></label>
+                            <input type="number" id="captcha-input" placeholder="Ответ" required>
+                        </div>
+
+                        <div class="form__agree">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">Я согласен с <a href="./personal-data-policy.php">политикой конфиденциальности</a></label>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                            <span>Запросить доступ</span>
+                            <i data-lucide="send"></i>
+                        </button>
+
+                        <div id="formMessage" class="form__message"></div>
+                    </form>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="contact__form-wrapper">
-            <form id="ajax-form" class="contact__form">
-                <div class="form-group">
-                    <input type="text" name="name" id="name" placeholder="Ваше имя" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" id="email" placeholder="Email адрес" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" name="phone" id="phone" placeholder="Телефон (только цифры)" required>
-                </div>
-
-                <div class="form-captcha">
-                    <label for="captcha">Сколько будет <span id="captcha-question"></span>?</label>
-                    <input type="number" id="captcha-answer" placeholder="Ответ" required>
-                </div>
-
-                <div class="form-agreement">
-                    <label class="checkbox">
-                        <input type="checkbox" required>
-                        <span class="checkmark"></span>
-                        Я согласен с <a href="./personal-data-policy.php">политикой обработки данных</a>
-                    </label>
-                </div>
-
-                <button type="submit" class="btn btn--primary btn--block" id="submit-btn">
-                    <span>Отправить запрос</span>
-                    <i data-lucide="send"></i>
-                </button>
-
-                <div id="form-message" class="form-message"></div>
-            </form>
-        </div>
-    </div>
-</section>
-
-
-    </main>
+        </main>
 
     <footer class="footer">
         <div class="container footer__grid">
             <div class="footer__col">
-                <a href="./#hero" class="logo footer__logo">
+                <a href="/" class="logo footer__logo">
                     <span class="logo__icon"></span>
-                    <span class="logo__text">
-                        <?= $domainTitle ?>
-                    </span>
+                    <span class="logo__text"><?= $domainTitle ?></span>
                 </a>
-                <p class="footer__description">Технологии нового поколения для вашего бизнеса. Переосмыслите подход к
-                    развитию вместе с экспертной поддержкой.</p>
+                <p class="footer__description">
+                    Технологии нового поколения, доступные каждому. Переосмыслите подход к развитию вместе с нами.
+                </p>
             </div>
 
             <div class="footer__col">
                 <h4 class="footer__title">Навигация</h4>
                 <ul class="footer__links">
-                    <li><a href="./#hero">Главная</a></li>
-                    <li><a href="./#strategies">Стратегии</a></li>
-                    <li><a href="./#expertise">Экспертиза</a></li>
-                    <li><a href="./#insights">Инсайты</a></li>
+                    <li><a href="./#home">Главная</a></li>
+                    <li><a href="./#features">Возможности</a></li>
+                    <li><a href="./#cases">Кейсы</a></li>
+                    <li><a href="./#education">Обучение</a></li>
                 </ul>
             </div>
 
@@ -382,46 +430,55 @@
 
             <div class="footer__col">
                 <h4 class="footer__title">Контакты</h4>
-                <ul class="footer__contact">
-                    <li><i data-lucide="phone" class="icon-sm"></i> +390697639457</li>
-                    <li><i data-lucide="mail" class="icon-sm"></i> hello@
-                        <?= $fullDomain ?>
+                <ul class="footer__contacts">
+                    <li>
+                        <i data-lucide="phone"></i>
+                        <a href="tel:+33189480586">+33 1 89 48 05 86</a>
                     </li>
-                    <li><i data-lucide="map-pin" class="icon-sm"></i> Kurfürstendamm 21, 10719 Berlin, Germany</li>
+                    <li>
+                        <i data-lucide="mail"></i>
+                        <a href="mailto:hello@<?= $fullDomain ?>">hello@<?= $fullDomain ?></a>
+                    </li>
+                    <li>
+                        <i data-lucide="map-pin"></i>
+                        <span>75 Rue de Rivoli, 75001 Paris, France</span>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="container footer__bottom">
-            <p>&copy; 2026
-                <?= $domainTitle ?>. Все права защищены. Предложение активно только в странах ЕС.
-            </p>
+            <p>&copy; 2026 <?= $domainTitle ?>. Все права защищены. Платформа уже доступна в Европе.</p>
         </div>
     </footer>
-<div class="mobile-menu">
-    <button class="mobile-menu__close"><i data-lucide="x"></i></button>
-    <ul class="mobile-menu__list">
-        <li><a href="./#hero" class="mobile-menu__link">Главная</a></li>
-        <li><a href="./#strategies" class="mobile-menu__link">Стратегии</a></li>
-        <li><a href="./#expertise" class="mobile-menu__link">Экспертиза</a></li>
-        <li><a href="./#insights" class="mobile-menu__link">Инсайты</a></li>
-        <li><a href="./#reviews" class="mobile-menu__link">Отзывы</a></li>
-        <li><a href="./#contact" class="btn btn--primary">Связаться</a></li>
-    </ul>
-</div>
-
-<div id="cookie-popup" class="cookie-popup">
-    <div class="cookie-popup__content">
-        <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie
-                политике</a>.</p>
-        <button id="cookie-accept" class="btn btn--accent-sm">Принять</button>
+    <div class="menu-overlay" id="menuOverlay">
+        <div class="menu-overlay__content">
+            <ul class="mobile-nav">
+                <li><a href="./#home" class="mobile-nav__link">Главная</a></li>
+                <li><a href="./#features" class="mobile-nav__link">Возможности</a></li>
+                <li><a href="./#cases" class="mobile-nav__link">Кейсы</a></li>
+                <li><a href="./#education" class="mobile-nav__link">Обучение</a></li>
+                <li><a href="./#faq" class="mobile-nav__link">Вопросы</a></li>
+            </ul>
+            <a href="./#contact" class="btn btn--primary mobile-nav__btn">Запросить доступ</a>
+        </div>
     </div>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script type="module" src="script.js"></script>    
- 
     
+    <div class="cookie-popup" id="cookiePopup">
+        <div class="cookie-popup__container">
+            <p class="cookie-popup__text">
+                Этот сайт использует cookies для улучшения работы. Подробнее — в нашей 
+                <a href="./cookies.php">Cookie политике</a>.
+            </p>
+            <button class="btn btn--primary btn--sm" id="acceptCookies">Принять</button>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="script.js"></script>
 </body>
-
 </html>
